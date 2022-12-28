@@ -1,0 +1,5 @@
+Ideas
+- many JSON Objects and choose Language
+- add many questions and choose only 10 randomly
+- Randomize Answers ()
+- start Quiz   (Done)

@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+
+body {
+  background-color: #88abff;
+}
+
+.wrapper {
+  margin: 50px;
+  display: -ms-grid;
+  display: grid;
+  gap: 15px;
+  -ms-grid-columns: (265px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 265px);
+}
+
+.wrapper li {
+  height: 250px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+}
+
+.add-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.add-box .icon {
+  height: 78px;
+  width: 78px;
+  color: #88abff;
+  font-size: 40px;
+  border-radius: 50%;
+  border: 2px dashed #88abff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.add-box p {
+  color: #88abff;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.note .details {
+  max-height: 165px;
+  overflow-y: auto;
+}
+
+.note p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.note span {
+  color: #575757;
+  display: block;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.note .bottom-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.note .bottom-content span {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+.note .bottom-content .settings {
+  position: relative;
+}
+
+.note .bottom-content .settings.show .menu {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.note .bottom-content .settings i {
+  color: #6d6d6d;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.note .bottom-content .settings .menu {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 0;
+  border-radius: 4px;
+  padding: 5px 0px;
+  background: #fff;
+  right: -5px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.note .bottom-content .settings .menu li {
+  height: 25px;
+  border-radius: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 17px 15px;
+}
+
+.note .bottom-content .settings .menu li:hover {
+  background: #f5f5f5;
+}
+
+.note .bottom-content .settings .menu li i {
+  padding-right: 8px;
+}
+
+.popup-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup-box.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-box.show .popup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-box .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  max-width: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup-box .popup .content {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  width: calc(100% -15px);
+}
+
+.popup-box .popup .content header {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup-box .popup .content header p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.popup-box .popup .content header i {
+  color: #8b8989;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.popup-box .popup .content form {
+  margin: 15px 25px 35px;
+}
+
+.popup-box .popup .content form .row {
+  margin-bottom: 20px;
+}
+
+.popup-box .popup .content form .row label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.popup-box .popup .content form :where(input, textarea) {
+  width: 100%;
+  border: 1px solid #999;
+  border-radius: 4px;
+  outline: none;
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+}
+
+.popup-box .popup .content form textarea {
+  height: 150px;
+  resize: none;
+  padding: 8px 15px;
+}
+
+.popup-box .popup .content form button {
+  width: 100%;
+  height: 50px;
+  background: #6a93f8;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

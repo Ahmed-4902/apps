@@ -1,0 +1,10 @@
+My development 
+[01]- Next auto when the song finish (Done)
+   [01]- even in random event        (Done)
+   [02]- Volume control              (Done)
+[02]- Play Random                    (Done)
+   [01]- fix repeat same song        (Done)
+[03]- Play Repeat Same Sone          (Done)
+[03]- play Street                    (Done)
+[04]- Volume control                 (Done)
+   [01]- change icon audio           (Done)
