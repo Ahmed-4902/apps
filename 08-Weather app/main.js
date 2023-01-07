@@ -72,10 +72,10 @@ function weatherDetails(info) {
 			wIcon.src = "icons/cloud.svg";
 		}
 
-		wrapper.querySelector(".temp .numb").innerText = Math.floor(temp);
+		wrapper.querySelector(".temp .numb").innerText = Math.round(temp);
 		wrapper.querySelector(".weather").innerText = description;
 		wrapper.querySelector(".location span").innerText = `${city}, ${country}`;
-		wrapper.querySelector(".temp .numb-2").innerText = Math.floor(feels_like);
+		wrapper.querySelector(".temp .numb-2").innerText = Math.round(feels_like);
 		wrapper.querySelector(".humidity span").innerText = `${humidity}%`;
 
 		infoTxt.classList.remove("pending", "error");

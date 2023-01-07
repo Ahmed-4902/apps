@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="main.css" />
 		<title>To Do</title>
 		<script
 			src="https://kit.fontawesome.com/2cde0fbd44.js"
@@ -13,46 +13,24 @@
 			href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
 			rel="stylesheet" />
 	</head>
+	<link rel="icon" href="imgs/to-do-list.png" />
 	<body>
-		<img src="image/img.jpg" alt="" />
-		<div class="container">
-			<div class="header">
-				<h1>TODO</h1>
-				<i class="material-icons-outlined"> light_mode </i>
+		<div class="wrapper">
+			<div class="task-input">
+				<i class="fa-solid fa-bars-staggered"></i>
+				<input type="text" placeholder="Add a new task" />
 			</div>
-
-			<form action="" class="form">
-				<input type="text" class="input" />
-				<input type="submit" class="add" value="Add Task" />
-			</form>
-
-			<div class="tasks">
-				<div class="task">
-					<div class="left">
-						<span class="gap"></span>
-						<i class="fa-solid fa-check"></i>
-						<p>hhhhhhhhhhhhh</p>
-					</div>
-
-					<div class="right">
-						<span class="star material-icons-outlined">
-							star_border
-						</span>
-						<span class="close material-icons-outlined"> close </span>
-					</div>
+			<div class="controls">
+				<div class="filters">
+					<span id="all" class="active">All</span>
+					<span id="pending">pending</span>
+					<span id="completed">completed</span>
 				</div>
+				<div class="clear-btn">Clear All</div>
 			</div>
-
-			<div class="control">
-				<div class="left">5 item left</div>
-				<div class="middle">
-					<span class="all">All</span>
-					<span class="active">Active</span>
-					<span class="completed">Completed</span>
-				</div>
-				<div class="right clear">Clear Completed</div>
-			</div>
+			<ul class="task-box"></ul>
 		</div>
+
 		<script src="main.js"></script>
 	</body>
 </html>
